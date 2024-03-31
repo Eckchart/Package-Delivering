@@ -8,8 +8,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Repository repo(R"(C:\Users\Robert\Desktop\qt creaaaator\PRACTICE_OBSERVER_1\packages.txt)",
-                    R"(C:\Users\Robert\Desktop\qt creaaaator\PRACTICE_OBSERVER_1\couriers.txt)");
+    Repository repo("packages.txt", "couriers.txt");
     Session sess(repo);
     const auto couriers = repo.get_couriers();
     for (const auto &courier : couriers)
